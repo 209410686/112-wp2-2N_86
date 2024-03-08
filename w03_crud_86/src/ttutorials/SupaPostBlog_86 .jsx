@@ -5,8 +5,6 @@ import { axios } from 'axios';
 let api_url = `https://etbxivzwzvhxmqxxvrwa.supabase.co/rest/v1/card2_86?select=*`;
 // let api_url = `http://localhost:5000/api/card_86`;
 
-
-
 const SupaPostBlog_86 = () => {
   const [name, setName] = useState('Hsingtai Chung');
   const [id, setId] = useState(123456789);
@@ -17,10 +15,21 @@ const SupaPostBlog_86 = () => {
       // const data = await response.json();
       //let { data, error } = await supabase.from('card_86').select('*');
 
-      const response = await axios.get(api_url, {
-        headers:{
+      const response = await axios.get(api_url,
+        {
+          id:11,
+          title:'Juanx-209410686', 
+          descrip:'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+          category: 'travel', 
+          img:'/images/photo-9.jpg', 
+          remote_url:'https://erogcveccbzsyhbgputf.supabase.co/storage/v1/object/public/demo-xx/card-xx/photo-9.jpg',
+        },
+        {
+        headers: {
           apikey: 'SUPABASE_CLIENT_ANON_KEY',
-          Authorization: 'Bearer SUPABASE_CLIENT_ANON_KEY'
+          Authorization: 'Bearer SUPABASE_CLIENT_ANON_KEY',
+          Content: 'application/json',
+          Prefer: 'return=minimal',
         },
       });
       console.log('blogs data', data);
@@ -49,7 +58,7 @@ const SupaPostBlog_86 = () => {
               <img src={img} alt='Coffee photo' className='img blog-img' />
               <div className='blog-content'>
                 <span>
-                {' '}
+                  {' '}
                   {category} <i className='fa-solid fa-mug-saucer'></i>
                 </span>
                 <h3>{title}</h3> <p>{descrip}</p> <a href='#'>read more</a>
