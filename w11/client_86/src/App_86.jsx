@@ -1,10 +1,13 @@
 import { BrowserRouter, Routes, Route, Router, createBrowserRouter } from 'react-router-dom';
+import {QueryClient,QueryClientProvider } from '@tanstack/react-query'
+import {ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
 import HomePage_86 from './pages/HomePage_86';
 import HomeLayout_86  from './pages/HomeLayout_86';
 import SupaGetBlog_86 from './pages/demo_86/SupaGetBlog_86';
 import Mid1SupaBlog_86 from './pages/mid1_86/Mid1SupaBlog_86';
 import Mid2NodeBlog_86 from './pages/mid1_86/Mid2NodeBlog_86';
+import Mid2NodeBlogLocal_86 from './w12/Mid2NodeBlogLocal_86'
 
 const queryClient = new QueryClient({
   defaultoptions: {
@@ -34,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'demoGetBlog_86',
         element:<SupaGetBlog_86/>,
+      },
+      {
+        path: 'Mid2NodeBlogLocal_86',
+        element:<Mid2NodeBlogLocal_86/>,
       },
     ]
   }
