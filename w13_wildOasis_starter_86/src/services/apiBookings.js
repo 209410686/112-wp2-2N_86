@@ -1,6 +1,6 @@
 import supabase from './supabase';
-
 import supabase, { supabaseUrl } from './supabase';
+
 export const getBooking = async (id) => {
   const { data, error } = await supabase
     .from('booking_86')

@@ -10,7 +10,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import {
   Account_xx,
   Bookings_xx,
-  Cabins_xx,
+  Cabins_86,
   Dashboard_xx,
   Login_xx,
   PageNotFound_xx,
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'cabins',
-        element: <Cabins_xx />,
+        element: <Cabins_86 />,
       },
       {
         path: 'users',
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App_xx = () => {
+const App_86 = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <GlobalStyles />
@@ -97,4 +97,4 @@ const App_xx = () => {
   );
 };
 
-export default App_xx;
+export default App_86;

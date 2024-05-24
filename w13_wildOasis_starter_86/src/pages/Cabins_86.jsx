@@ -2,7 +2,7 @@ import CabinTable from '../features/cabins/CabinTable';
 import Heading from '../ui/Heading';
 import Row from '../ui/Row';
 
-const Cabins_xx = () => {
+const Cabins_86 = () => {
   return (
     <>
       <Row type='horizontal'>
@@ -16,4 +16,4 @@ const Cabins_xx = () => {
   );
 };
 
-export default Cabins_xx;
+export default Cabins_86;
